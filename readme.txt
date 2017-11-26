@@ -1,3 +1,6 @@
+Codle a platform to organize competitive programming contests.
+
+
 To run the project:
 
 Install-flask,flask-sqlalchemy,flask-migrate,flask-bcrypt
@@ -18,3 +21,6 @@ python run.py
 Admin credentials:
 user:admin
 password:admin
+
+Open run.py:
+change host parameter to your ip
