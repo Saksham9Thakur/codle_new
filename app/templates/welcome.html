@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
+    <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
+    <title>Homepage | Codle</title>
+
+    <!-- Favicons-->
+    <link rel="icon" href="../static/images/favicon/favicon-32x32.png" sizes="32x32">
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="../static/images/favicon/apple-touch-icon-152x152.png">
+    <!-- For iPhone -->
+    <meta name="msapplication-TileColor" content="#00bcd4">
+    <meta name="msapplication-TileImage" content="../static/images/favicon/mstile-144x144.png">
+    <!-- For Windows Phone -->
+
+  <link href="{{ url_for('static', filename="css/materialize.css")}}" type="text/css" rel="stylesheet" media="screen,projection">
+
+   <link href=  "{{ url_for('static', filename="css/style.css")}}" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href=  "{{ url_for('static', filename="css/page-center.css")}}" type="text/css" rel="stylesheet" media="screen,projection">
+
+ 
+  <link href=  "{{ url_for('static', filename="css/prism.css")}}" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href=  "{{ url_for('static', filename="js/plugins/perfect-scrollbar/perfect-scrollbar.css")}}" type="text/css" rel="stylesheet" media="screen,projection">
+  
+</head>
+{%for i in get_flashed_messages()%}
+{{i}}
+{%endfor%}
+<body>
+
+    <!-- Start Page Loading -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>        
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <!-- End Page Loading -->
+
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+    <!-- START HEADER -->
+    <header id="header" class="page-topbar">
+        <!-- start header nav-->
+        <div class="navbar-fixed">
+            <nav class="cyan">
+                <div class="nav-wrapper">
+                    <h1 class="logo-wrapper"><a href="#" class="brand-logo darken-1"><img src="../static/images/materialize-logo.png" alt="materialize logo"></a> <span class="logo-text">Codle</span></h1>
+                    <ul class="right hide-on-med-and-down">
+                        <li class="search-out">
+                            <input type="text" class="search-out-text">
+                        </li>
+                        <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen"><i class="mdi-action-settings-overscan"></i></a>
+                        </li>
+                       
+                        <!-- Dropdown Trigger -->                        
+                       
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- end header nav-->
+  </header>
+    <!-- END HEADER -->
+
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+    <!-- START MAIN -->
+    <div id="main" style="padding-left: 0;">
+        <!-- START WRAPPER -->
+        <div class="wrapper">
+
+            <!-- START CONTENT -->
+            <section id="content"> 
+                <!--start container-->
+                <div class="container">
+	                    <div id="media-slider">
+				            <div class="row">
+				              <div class="col s12 m12 l12">
+				                <div class="slider">
+				                  <ul class="slides">
+				                    <li>
+				                      <img src="{{ url_for('static', filename="images/123.jpg")}}" alt="img-1">
+				                      <!-- random image -->
+				                      <div class="caption center-align">
+				                        <h3>JOIN.PARTICIPATE.COMPETE</h3>
+				                        <h5 class="light grey-text text-lighten-3">Sign Up Now!</h5>
+				                        <a href="{{url_for('login')}}" id="container-toggle-button" class="btn waves-effect waves-light">Click to login</a>
+	            						<a href="{{url_for('reg')}}" id="container-toggle-button" class="btn waves-effect waves-light">Click to signup</a>
+				                      </div>
+				                    </li>
+				                    <li>
+				                      <img src="{{ url_for('static', filename="images/456.jpg")}}" alt="img-2">
+				                      <!-- random image -->
+				                      <div class="caption left-align">
+				                        <h3>COMPETE AMONG THE BEST</h3>
+				                        <h5 class="light grey-text text-lighten-3">Click to Login!</h5>
+				                        <a href="{{url_for('login')}}" id="container-toggle-button" class="btn waves-effect waves-light">Click to login</a>
+	            						<a href="{{url_for('reg')}}" id="container-toggle-button" class="btn waves-effect waves-light">Click to signup</a>
+				                      </div>
+				                    </li>
+				                    <li>
+				                      <img src="{{ url_for('static', filename="images/789.jpg")}}" alt="img-3">
+				                      <!-- random image -->
+				                      <div class="caption right-align">
+				                        <h3>EAT.SLEEP.CODE.REPEAT.</h3>
+				                        <h5 class="light grey-text text-lighten-3">Sign Up or login Here!</h5>
+				                        <a href="{{url_for('login')}}" id="container-toggle-button" class="btn waves-effect waves-light">Click to login</a>
+	            						<a href="{{url_for('reg')}}" id="container-toggle-button" class="btn waves-effect waves-light">Click to signup</a>
+				                      </div>
+				                    </li>
+				                  </ul>
+				                </div>
+
+				              </div>
+				            </div>
+			          	</div>
+
+	                    <div class="divider"></div>      
+
+                        <!--Example Promotion Table-->
+                        <div id="promotion-table" class="section">
+                            <div class="row">
+                                <div class="col s12 m12 l12">
+                                    <div class="card-panel">
+                                        <div class="row">
+                                            <div class="col s4">
+                                                <div class="center promo promo-example">
+                                                    <i class="mdi-image-flash-on"></i>
+                                                    <p class="flow-text">Speeds up your coding skills</p>
+                                                    <p class="light center">Improve your coding skills with our platform.</p>
+                                                </div>
+                                            </div>
+                                            <div class="col s4">
+                                                <div class="center promo promo-example">
+                                                    <i class="mdi-social-group"></i>
+                                                    <p class="flow-text">User Experience Focused</p>
+                                                    <p class="light center">Know where you stand among others through our user friendly platform</p>
+                                                </div>
+                                            </div>
+                                            <div class="col s4">
+                                                <div class="center promo promo-example">
+                                                    <i class="mdi-action-settings"></i>
+                                                    <p class="flow-text">Easy to work with!</p>
+                                                    <p class="light center">Coding will be all fun!, will never be a burden.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="divider"></div>
+                        <!--Responsive Side Navigation Layout-->
+                        <div id="responsive-side-navigation-layout" class="section">
+                            <h4 class="header">A built-in code editor!</h4>
+                            <div class="row">
+                                <div class="col s12 m4 l3">
+                                    <p>Now you can test your code online ! Choose between your favourite coding language and test for multiple test cases with our online compiler ! You can choose your favourite coding language and crack the problem.Initially, we are providing support with C, C++ and JAVA.</p>
+                                </div>
+                                <div class="col s12 m8 l9">
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <div class="browser-window">
+                                                <div class="top-bar">
+                                                    <div class="circles">
+                                                        <div id="close-circle" class="circle"></div>
+                                                        <div id="minimize-circle" class="circle"></div>
+                                                        <div id="maximize-circle" class="circle"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="content">
+                                                    <div class="row">
+
+                                                        <div id="site-layout-example-top" class="col s12">
+                                                            <!-- <p class="flat-text-logo"></p> -->
+                                                        </div>
+                                                        <div id="site-layout-example-left" class="col s12 m4 l3">
+                                                            <p class="flat-text-header"></p>
+                                                            <p class="flat-text"></p>
+                                                            <p class="flat-text"></p>
+                                                        </div>
+                                                        <div id="site-layout-example-right" class="col s12 m8 l9">
+                                                            <p class="flat-text"></p>
+                                                            <p class="flat-text"></p>
+                                                            <p class="flat-text"></p>
+                                                            <p class="flat-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end container-->
+            </section>
+            <!-- END CONTENT -->
+            
+        </div>
+        <!-- END WRAPPER -->
+
+    </div>
+    <!-- END MAIN -->
+
+    <!-- START FOOTER -->
+    <footer class="page-footer" style="padding-left: 0;">
+        <div class="footer-copyright">
+            <div class="container">
+            <span>Copyright © 2017 <a class="grey-text text-lighten-4" href="http://themeforest.net/user/geekslabs/portfolio?ref=geekslabs" target="_blank">Codle</a> All rights reserved.</span>
+            <span class="right"> Design and Developed by <a class="grey-text text-lighten-4" href="http://geekslabs.com/">Codle</a></span>
+            </div>
+        </div>
+    </footer>
+    <!-- END FOOTER -->
+
+
+
+    <!-- ================================================
+    Scripts
+    ================================================ -->
+    
+    <!-- jQuery Library -->
+<script type="text/javascript" src="{{ url_for('static', filename="js/jquery-1.11.2.min.js")}}"></script>
+  <!--materialize js-->
+  <script type="text/javascript" src="{{ url_for('static', filename="js/materialize.js")}}"></script>
+  <!--prism-->
+  <script type="text/javascript" src="{{ url_for('static', filename="js/prism.js")}}"></script>
+  <!--scrollbar-->
+  <script type="text/javascript" src="{{ url_for('static', filename="js/plugins/perfect-scrollbar/perfect-scrollbar.min.js")}}"></script>
+
+  <!--plugins.js - Some Specific JS codes for Plugin Settings-->
+  <script type="text/javascript" src="{{ url_for('static', filename="js/plugins.js")}}"></script>
+    
+</body>
+
+</html>
